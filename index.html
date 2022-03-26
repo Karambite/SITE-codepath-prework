@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Hello world!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <audio src= "https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/IntroMusic?v=1647397612064" id = "IntroMusic" autoplay></audio>
+    
+     <!-- mute and unmute game options -->
+    <button style = "float:right" onclick = "pauseIntro()"> mute </button>
+    <button style = "float:right" onclick = "playIntro()"> unmute </button>
+    <h1>
+      Light and Sound Memory Game
+    </h1>
+    <p>
+      Repeat the pattern back to win the game
+    </p>
+    
+    <!-- Game Speed options -->
+    <p> Pick the speed of the game to play...</p>
+    <div id = "gameSpeed">
+      <button id = "normal" onclick = "selectedSpeed(1)">Normal</button>
+      <button id = "times2" onclick = "selectedSpeed(2)">x2</button>
+      <button id = "times4" onclick = "selectedSpeed(4)">x4</button>
+    </div>
+    <br>
+    <button id = "startButton" onclick = "startGame(),pauseIntro()">Start</button>
+    <button id = "stopButton" class = "hidden" onclick = "stopGame(),playIntro()">Stop</button>
+    <p id = "timer" style = "float:middle"></p>
+    <div id = "gameButtonArea">
+      <button id = "button1" onclick = "guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Logo_TVE-1.svg/1200px-Logo_TVE-1.svg.png" /></button>
+      <button id = "button2" onclick = "guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"><img src = "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/d2708e8aa31df3fe7b211bca36405d6d.png" width = "180"/></button>
+      <button id = "button3" onclick = "guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"><img src = "https://www.jmcvoiceover.com/wp-content/uploads/2018/09/3-friday.jpg" /></button>
+      <button id = "button4" onclick = "guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9B8MDp84PJcyb_FK1Yo5JkJg66bvYW-OKg&usqp=CAU" width="200"/></button>
+      <button id = "button5" class = "hidden" onclick = "guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()"><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbxQrxH3kdGp7P7bAqYDequNqcwCOVmufFRQ&usqp=CAU" width="150"/></button>
+      <button id = "button6" class = "hidden" onclick = "guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()"><img src = "https://suncatcherstudio.com/uploads/lettering-fonts/fire-flame-clipart/small/fire-flame-clipart-font-number-6.jpg" width="140"/></button>
+    </div>
+      
+     <!-- More options -->
+    <div id = "More buttons">
+    <p id = "moreButtonsPrompt" class = "unhidden"> More Options? </p>
+    <button id = "Buttons_5" onclick = "moreButtons(5)">5 Buttons</button>
+    <button id = "Buttons_6" onclick = "moreButtons(6)">6 Buttons</button>
+    <button id = "removeButtons" class = "hidden" onclick = "backtoFour()">Back to 4</button>
+    <p id = "Remainingtime"></p>
+    </div>
+  </body>
+</html>
+
+<!--
+This starter gives you everything you need to start working on a new
+      website, and nothing more. If you're looking for something a little more
+      opinionated, try remixing
+      <a href="https://glitch.com/edit/#!/remix/glitch-hello-website"
+        >~glitch-hello-website</a
+      >.
+<button id = "removeButtons_5" class = "hidden" onclick = "removeButtons(5)">remove Button 5</button>
+
+https://www.javatpoint.com/how-to-call-javascript-function-in-html
+-->
