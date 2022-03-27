@@ -206,10 +206,10 @@ function myTimer() {
     "Time reamining: " + timer;
   // out of time
   if (timer <= -1) {
+    loseGame();
     timer = DEFUALT_START_TIME;
     nextClueWaitTime = 1000;
     clearInterval(timerSet);
-    loseGame();
   }
 }
 
