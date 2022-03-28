@@ -4,7 +4,7 @@
 
 Submitted by: **Sudesh Easwaran**
 
-Time spent: **10** hours spent in total
+Time spent: **8** hours spent in total
 
 Link to project: (https://glitch.com/edit/#!/breezy-towering-secretary?path=index.html%3A70%3A66)
 
