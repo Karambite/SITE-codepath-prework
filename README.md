@@ -33,8 +33,6 @@ The following **optional** features are implemented:
 * [x] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
-
-- [x] List anything else that you can get done to improve the app!
 - [x] The added buttons that use a different pitch (frequency)
 - [x] The player has an option to change playback speeds up on each turn
 - [x] The player has an option to change the number of buttons before the game begins
