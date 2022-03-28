@@ -46,60 +46,75 @@ button {
 
 /*characteristics of the button*/
 #button1 {
-  background: lightgreen;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSEn4LIcs3-5WXkkSK0IOSuPCuGmhXINlitw&usqp=CAU");
+  background-size: 250px 250px;
 }
 #button2 {
-  background: lightblue;
+  background-image: url("https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/26765408-f61e-491b-9c18-e2dcda8f3a0b.image.png?v=1648427350712");
+  background-size: 250px 250px;
 }
 #button3 {
-  
-  background: pink;
+  background-image: url("https://www.jmcvoiceover.com/wp-content/uploads/2018/09/3-friday.jpg");
+  background-size: 250px 250px;
 }
 #button4 {
-  background: lightyellow;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9B8MDp84PJcyb_FK1Yo5JkJg66bvYW-OKg&usqp=CAU");
+  background-size: 250px 250px;
 }
 #button5 {
-  background: lightSalmon;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbxQrxH3kdGp7P7bAqYDequNqcwCOVmufFRQ&usqp=CAU");
+  background-size: 250px 250px;
 }
 #button6 {
-  background: blueViolet;
+  background-image: url("https://suncatcherstudio.com/uploads/lettering-fonts/fire-flame-clipart/small/fire-flame-clipart-font-number-6.jpg");
+  background-size: 250px 250px;
 }
 
 /*characteristics when the button is clicked*/
 #button1:active,
 #button1.lit {
-  background-image: linear-gradient(to top right, lightgreen, green);
+  opacity : .8;  
 }
 #button2:active,
 #button2.lit {
-  background-image: linear-gradient(to top right, lightblue, blue);
+  opacity : .8;
 }
 #button3:active,
 #button3.lit {
-  background-image: linear-gradient(to top right, pink, red);
+  opacity : .8;
 }
 #button4:active,
 #button4.lit {
-  background-image: linear-gradient(to top right, lightyellow, yellow);
+  opacity : .8;
 }
 #button5:active,
 #button5.lit {
-  background-image: linear-gradient(to top right, lightSalmon, orange);
+  opacity : .8;
 }
 #button6:active,
 #button6.lit {
-  background-image: linear-gradient(to top right, violet, blueViolet);
+  opacity : .8;
 }
 #normal:active {
-  background: dimgrey;
+  background-image: linear-gradient(to top right, white, dimgrey);
 }
 #times2:active,
 #times2.lit {
-  background: dimgrey;
+  background-image: linear-gradient(to top right, white, dimgrey);
 }
 #times4:active,
 #times4.lit {
-  background: dimgrey;
+  background-image: linear-gradient(to top right, white, dimgrey);
+}
+
+#mute:active,
+#mute.lit {
+  background-image: radial-gradient(white, dimgrey);
+}
+
+#unmute:active,
+#unmute.lit {
+  background-image: radial-gradient(white, dimgrey);
 }
 
 /* images and videos max out at full width */
