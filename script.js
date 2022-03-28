@@ -59,6 +59,7 @@ function startGame() {
   document.getElementById("startButton").classList.add("hidden");
   document.getElementById("stopButton").classList.remove("hidden");
   document.getElementById("Remainingtime").innerHTML = "Start Time:" + timer;
+  document.getElementById("Lives").innerHTML = "Strikes reamining: " + strikes;
   playClueSequence();
 }
 
@@ -123,6 +124,7 @@ function playSingleClue(btn) {
 
 /* plays a series of clues */ 
 function playClueSequence() {
+  document.getElementById("Lives").innerHTML = "Strikes reamining: " + strikes;
   guessCounter = 0;
   context.resume();
   let delay = new_nextClueWaitTime; //set delay to initial wait time
@@ -171,7 +173,7 @@ function guess(btn) {
     }
   } else {
     strikes--;
-    alert("You have " + strikes + " strike(s) left");
+    clearInterval(timerSet);
     playClueSequence();
     if (strikes == 0)
       //third strike
@@ -186,6 +188,7 @@ function hideMoreButtons() {
   document.getElementById("Buttons_6").classList.add("hidden");
   document.getElementById("removeButtons").classList.add("hidden");
   document.getElementById("Remainingtime").classList.remove("hidden");
+  document.getElementById("Lives").classList.remove("hidden");
 }
 
 /*helper method when the game stops*/
@@ -196,14 +199,14 @@ function viewMoreButtons() {
   document.getElementById("button5").classList.add("hidden");
   document.getElementById("button6").classList.add("hidden");
   document.getElementById("Remainingtime").classList.add("hidden");
+  document.getElementById("Lives").classList.add("hidden");
 }
 
 /* creates a timer*/
 function myTimer() {
   timer -= 1;
   document.getElementById("Remainingtime").innerHTML = "";
-  document.getElementById("Remainingtime").innerHTML =
-    "Time reamining: " + timer;
+  document.getElementById("Remainingtime").innerHTML = "Time reamining: " + timer;
   // out of time
   if (timer <= -1) {
     loseGame();
