@@ -12,6 +12,7 @@ const clueStartHoldTime = 1000;
 var new_clueHoldTime;
 var new_cluePauseTime;
 var new_nextClueWaitTime;
+var new_Timebase;
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
@@ -32,7 +33,13 @@ function selectedSpeed(speed) {
   new_clueHoldTime = clueHoldTime / speed;
   new_cluePauseTime = cluePauseTime / speed;
   new_nextClueWaitTime = nextClueWaitTime / speed;
-  timer = DEFUALT_START_TIME;
+  if(speed == 1)
+    new_Timebase = 0;
+  else if(speed == 2)
+    new_Timebase = 4;
+  else if(speed == 4)
+    new_Timebase = 8;
+  timer = DEFUALT_START_TIME - new_Timebase;
   ready = true;
 }
 
@@ -66,7 +73,7 @@ function startGame() {
 /*stops the game*/
 function stopGame() {
   //initialize game variables
-  timer = DEFUALT_START_TIME;
+  timer = DEFUALT_START_TIME - new_Timebase;
   buttons = 4;
   gamePlaying = false;
   
@@ -135,7 +142,7 @@ function playClueSequence() {
     delay += new_clueHoldTime;
     delay += new_cluePauseTime;
   }
-  timer = DEFUALT_START_TIME * (progress + 1);
+  timer = (DEFUALT_START_TIME - new_Timebase) * (progress + 1);
   setTimeout(startTimer, delay);
 }
 
@@ -210,7 +217,7 @@ function myTimer() {
   // out of time
   if (timer <= -1) {
     loseGame();
-    timer = DEFUALT_START_TIME;
+    timer = DEFUALT_START_TIME - new_Timebase;
     nextClueWaitTime = 1000;
     clearInterval(timerSet);
   }
@@ -220,8 +227,8 @@ function myTimer() {
 function startTimer() {
   if (gamePlaying) {
     // make new timer variable for next sequence
-    timerSet = setInterval(myTimer, 100);
-    timer = DEFUALT_START_TIME * (progress + 1);
+    timerSet = setInterval(myTimer, 1000);
+    timer = (DEFUALT_START_TIME - new_Timebase) * (progress + 1);
   }
 }
 
