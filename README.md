@@ -42,15 +42,15 @@ The following **additional** features are implemented:
 - [x] The game has an introduction song (the music plays till the user press start). The player can mute and unmmute the introduction song
 ## Video Walkthrough (GIF)
 
-If you recorded multiple GIFs for all the implemented features, you can add them here:
+If you recorded multiple GIFs for all the implemented features, you can add them here:<br><br>
 ![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/70345588/161146243-a2838c9a-01e2-4979-9d96-e6363bc570cb.gif)<br>
-Pregame buttons <br>
+Pregame buttons <br><br>
 ![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/70345588/161146250-d3be17e3-5ffd-42ba-8bcf-c5e899898f9c.gif)<br>
-Playing the game with times 4 speed and 6 buttons resulting in a win. Also shows the randomized arrays <br>
+Playing the game with times 4 speed and 6 buttons resulting in a win. Also shows the randomized arrays <br><br>
 ![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/70345588/161144915-ccca0c7a-7a37-4ab1-ab08-5619fb63cf57.gif)<br>
-Losing game by Timer running out <br>
+Losing game by Timer running out <br><br>
 ![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/70345588/161146237-e55cd636-7fe4-4ade-80ca-96a272ad3ab8.gif)<br>
-Losing game by using all strikes <br>
+Losing game by using all strikes <br><br>
 
 
 
