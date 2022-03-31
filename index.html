@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-    <title>Hello world!</title>
+    <title>Light and Sound Memory Game</title>
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
@@ -18,11 +18,11 @@
     <audio src= "https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/IntroMusic?v=1647397612064" id = "IntroMusic" autoplay></audio>
     
      <!-- mute and unmute game options -->
-    <button id = "mute" style = "float:right" onclick = "pauseIntro()"> mute </button>
-    <button id = "unmute" style = "float:right" onclick = "playIntro()"> unmute </button>
-    <h1>
-      Light and Sound Memory Game
-    </h1>
+    <button id = "mute" style = "float:right" onclick = "pauseIntro()"></button>
+    <button id = "unmute" style = "float:right" onclick = "playIntro()"></button>
+    <h1><b><i>
+      LETS GO INTO THE DARKNESS
+      </i></b></h1>
     <p>
       Repeat the pattern back to win the game || You only have 3 strikes
     </p>
@@ -33,10 +33,12 @@
       <button id = "normal" onclick = "selectedSpeed(1)">Normal</button>
       <button id = "times2" onclick = "selectedSpeed(2)">x2</button>
       <button id = "times4" onclick = "selectedSpeed(4)">x4</button>
+      <p id = "speedDisplay">Default Speed is Normal</p>
     </div>
     <br>
-    <button id = "startButton" onclick = "startGame(),pauseIntro()">Start</button>
-    <button id = "stopButton" class = "hidden" onclick = "stopGame(),playIntro()">Stop</button>
+    <br>
+    <button id = "startButton" onclick = "startGame(),pauseIntro()"><b><i>Start</i></b></button>
+    <button id = "stopButton" class = "hidden" onclick = "stopGame(),playIntro()"><b><i>Stop</i></b></button>
     <p id = "timer" style = "float:middle"></p>
     <div id = "gameButtonArea">
       <button id = "button1" onclick = "guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
@@ -49,12 +51,25 @@
       
      <!-- More options -->
     <div id = "More buttons">
-    <p id = "moreButtonsPrompt" class = "unhidden"> More Options? </p>
-    <button id = "Buttons_5" onclick = "moreButtons(5)">5 Buttons</button>
-    <button id = "Buttons_6" onclick = "moreButtons(6)">6 Buttons</button>
+      <p id = "moreButtonsPrompt" class = "unhidden" style = "color: purple; font-size: 35px"><b> More Options? </b></p>
+      <button id = "Buttons_5" onclick = "moreButtons(5)"><b>5 Buttons</b></button>
+      <button id = "Buttons_6" onclick = "moreButtons(6)"><b>6 Buttons</b></button>
     <button id = "removeButtons" class = "hidden" onclick = "backtoFour()">Back to 4</button>
-    <p id = "Lives"></p>
-    <p id = "Remainingtime"></p>
+    </div>
+    <p id = "Remainingtime"></p>    
+    <br>
+    <p id = "Lives" ></p>
+    <div id = "picLives" class = "hidden">
+      
+      <div class="lives"> 
+    <img id = "picLives1"  src="https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/f7f848bd-94cb-410e-87b7-5948b7eaceac.image.png?v=1648608284659" style = "border: 2px solid white">
+          </div>
+      <div class="lives"> 
+    <img id = "picLives2"  src="https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/f7f848bd-94cb-410e-87b7-5948b7eaceac.image.png?v=1648608284659" style = "border: 2px solid white">
+          </div>
+      <div class="lives"> 
+    <img id = "picLives3"  src="https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/f7f848bd-94cb-410e-87b7-5948b7eaceac.image.png?v=1648608284659" style = "border: 2px solid white">
+          </div>
     </div>
   </body>
 </html>
