@@ -1,9 +1,10 @@
 /* a minimalist set of CSS resets */
-
 /* default to border-box */
 html {
+  cursor: crosshair;
+  caret-color: red;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 *,
@@ -14,20 +15,30 @@ html {
 
 /* adjust typography defaults */
 body {
-  background-image: radial-gradient(grey, black);
+  
+  
+  background-image: radial-gradient(rgba(128, 128, 128, 0.1), rgba(0,0,0,1)),
+    url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/5eb426ad-b091-449c-be0a-6cfd06991799.image.png?v=1648513957173);
+  background-size: cover;
   color: white;
   margin: 2em;
-  font-family: verdana, arial, sans-serif;
+  font-family: courier new,verdana, arial, sans-serif;
   line-height: 1.5;
 }
 
 h1 {
-  font-family: verdana, arial, sans-serif;
+  font-family: 'Brush Script MT', cursive ,verdana, arial, sans-serif;
+  border: 5px double black;
 }
 
 button {
-  padding: 20px;
+  cursor: grab;
+  padding: 10px;
   border-radius: 50px;
+  color: red;
+  background-color: black;
+  border: 2px solid white;
+  font-size: 20px;
 }
 #gameButtonArea > button {
   width: 250px;
@@ -36,9 +47,16 @@ button {
   font-size: 160px;
 }
 #gameSpeed > button {
-  background: white;
+  color:yellow;
+  background: dimgrey;
+  border: 2px solid black;
+  left:50%;
+  top:50%;
+  margin-top: -100px;
+  margin-left: 100px;
   padding: 10px;
   border-radius: 0px;
+  
 }
 .hidden {
   display: none;
@@ -46,54 +64,60 @@ button {
 
 /*characteristics of the button*/
 #button1 {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSEn4LIcs3-5WXkkSK0IOSuPCuGmhXINlitw&usqp=CAU");
+  border: 2px solid red;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/e0d7f2a6-fba1-43ab-81c1-346cb40035ff.image.png?v=1648512114287);
   background-size: 250px 250px;
 }
 #button2 {
-  background-image: url("https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/26765408-f61e-491b-9c18-e2dcda8f3a0b.image.png?v=1648427350712");
+  border: 2px solid yellow;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/59066f45-73e6-4059-a9f4-7518e3b37ce7.image.png?v=1648512125576);
   background-size: 250px 250px;
 }
 #button3 {
-  background-image: url("https://www.jmcvoiceover.com/wp-content/uploads/2018/09/3-friday.jpg");
+  border: 2px solid orange;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/c1a44947-cc4c-4a79-bd43-1983ec3fd28b.image.png?v=1648512130492);
   background-size: 250px 250px;
 }
 #button4 {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9B8MDp84PJcyb_FK1Yo5JkJg66bvYW-OKg&usqp=CAU");
+  border: 2px solid white;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/2081699a-78ba-4176-8ffa-37925b7d5316.image.png?v=1648512142152);
   background-size: 250px 250px;
 }
 #button5 {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbxQrxH3kdGp7P7bAqYDequNqcwCOVmufFRQ&usqp=CAU");
+  border: 2px solid #940194;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/c8f5c967-bf01-4a45-aa3d-60a511ae1598.image.png?v=1648512161091);
   background-size: 250px 250px;
 }
 #button6 {
-  background-image: url("https://suncatcherstudio.com/uploads/lettering-fonts/fire-flame-clipart/small/fire-flame-clipart-font-number-6.jpg");
+  border: 2px solid brown;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/95e55878-c917-4327-9583-8666a8029bdb.image.png?v=1648512179300);
   background-size: 250px 250px;
 }
 
 /*characteristics when the button is clicked*/
 #button1:active,
 #button1.lit {
-  opacity : .8;  
+  opacity : .1;  
 }
 #button2:active,
 #button2.lit {
-  opacity : .8;
+  opacity : .1;
 }
 #button3:active,
 #button3.lit {
-  opacity : .8;
+  opacity : .1;
 }
 #button4:active,
 #button4.lit {
-  opacity : .8;
+  opacity : .1;
 }
 #button5:active,
 #button5.lit {
-  opacity : .8;
+  opacity : .1;
 }
 #button6:active,
 #button6.lit {
-  opacity : .8;
+  opacity : .1;
 }
 #normal:active {
   background-image: linear-gradient(to top right, white, dimgrey);
@@ -107,16 +131,59 @@ button {
   background-image: linear-gradient(to top right, white, dimgrey);
 }
 
+#mute{
+  margin-left:10px;
+  background-color:white;
+  height: 70px;
+  width: 75px;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/a5ff18aa-4096-4df3-b2c4-6914235012e4.image.png?v=1648603082067);
+  background-size: 70px 60px;
+}
+#unmute{
+  height: 70px;
+  width: 75px;
+  background-image: url(https://cdn.glitch.global/6b83f840-bc9e-4bb2-8525-841cd3a0fa55/a86e0d50-0e9f-4b61-838f-f3fe4c876322.image.png?v=1648605528848);
+  background-size: 70px 60px;
+}
 #mute:active,
 #mute.lit {
-  background-image: radial-gradient(white, dimgrey);
+  background-image: radial-gradient(white, black);
 }
 
 #unmute:active,
 #unmute.lit {
-  background-image: radial-gradient(white, dimgrey);
+  background-image: radial-gradient(white, black);
+}
+#Remainingtime{
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  padding-right: 50px;
+}
+#Lives{
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  padding-right: 50px;
+  
 }
 
+
+.lives {
+  float: left;
+  width: 5%;
+  height: 5%;
+  padding: 5px;
+  
+}
+
+
+.picLives::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
 /* images and videos max out at full width */
 img,
 video {
