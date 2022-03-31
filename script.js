@@ -22,11 +22,12 @@ var pattern;
 var strikes;
 var buttons = 4;
 
-var DEFUALT_START_TIME = 15;
+var DEFUALT_START_TIME = 5;
 var timer;
 var timerSet;
 
 var ready = false;
+
 
 /* changes the speed of the game baseed on user input, user must pick a speed or the program wont work properly*/
 function selectedSpeed(speed) {
@@ -36,11 +37,13 @@ function selectedSpeed(speed) {
   if(speed == 1)
     new_Timebase = 0;
   else if(speed == 2)
-    new_Timebase = 4;
+    new_Timebase = 1;
   else if(speed == 4)
-    new_Timebase = 8;
+    new_Timebase = 2;
   timer = DEFUALT_START_TIME - new_Timebase;
   ready = true;
+  document.getElementById("speedDisplay").innerHTML = "Speed Selected times " + speed;
+  
 }
 
 /*randomly populates the pattern */ 
@@ -66,7 +69,12 @@ function startGame() {
   document.getElementById("startButton").classList.add("hidden");
   document.getElementById("stopButton").classList.remove("hidden");
   document.getElementById("Remainingtime").innerHTML = "Start Time:" + timer;
-  document.getElementById("Lives").innerHTML = "Strikes reamining: " + strikes;
+  document.getElementById("Lives").innerHTML = "Strikes reamining: ";
+  document.getElementById("picLives").classList.remove("hidden");
+  document.getElementById("picLives1").classList.remove("hidden");
+  document.getElementById("picLives2").classList.remove("hidden");
+  document.getElementById("picLives3").classList.remove("hidden");
+  
   playClueSequence();
 }
 
@@ -83,6 +91,7 @@ function stopGame() {
   // swap the Start and Stop buttons, also disables timer display
   document.getElementById("stopButton").classList.add("hidden");
   document.getElementById("startButton").classList.remove("hidden");
+  document.getElementById("picLives").classList.add("hidden");
   playIntro();
   clearInterval(timerSet);
 }
@@ -131,7 +140,7 @@ function playSingleClue(btn) {
 
 /* plays a series of clues */ 
 function playClueSequence() {
-  document.getElementById("Lives").innerHTML = "Strikes reamining: " + strikes;
+  document.getElementById("Lives").innerHTML = "Strikes reamining: ";
   guessCounter = 0;
   context.resume();
   let delay = new_nextClueWaitTime; //set delay to initial wait time
@@ -180,11 +189,20 @@ function guess(btn) {
     }
   } else {
     strikes--;
+    if(strikes == 2)
+      document.getElementById("picLives3").classList.add("hidden");
+    if(strikes == 1)
+      document.getElementById("picLives2").classList.add("hidden");
+      
     clearInterval(timerSet);
     playClueSequence();
     if (strikes == 0)
+    {
+        document.getElementById("picLives1").classList.add("hidden");
+        loseGame();
+    }
       //third strike
-      loseGame();
+      
   }
 }
 
